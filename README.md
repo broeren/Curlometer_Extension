@@ -54,7 +54,21 @@ tetrahedral subsets (i.e groups 4 spacecraft). We preferentially select the tetr
 We ignore estimates from tetrahedra that do not pass these criteria. At each reconstructed point, we now estimate the value of $B$ using all tetrahedra that pass these criteria. From this esemble of estimates we take the median value as our final computed magnetic field vector $B$.
 
 
+
 ## How to Use
+We have included a select amount of data from a numerical simulation of plasma turbulence (solar wind like conditions). This data, stored in the folder 'example_data' can be used to reconstruct one example magnetic field around 3 different HelioSwarm (9-spacecraft) configurations. To change which configuration of spacecraft is used, cycle the *hour* parameter between 94, 144, and 205.
+```
+hour = 205              # hour of HS configuration to select [94, 144, or 205]
+```
+To change the nearby criteria, change the value of the *L_coeff* parameter. This modifies the equation above so that $|r_0 - \xi| < L_{coeff} L$
+```
+L_coeff = 1             # radius of reconstruction around each tetrahedron's barycenter
+```
+To change the shape criteria, change the *chi_thres* parameter. This modifies the equation above so that $\chi = \sqrt{E^2 + P^2} < \chi_{thres}$
+```
+chi_thres = 1.0         # shape threshold for using a tetrahedron in reconstruction (chi := sqrt{E^2 + P^2})
+```
+
 
 
 # References

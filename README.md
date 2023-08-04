@@ -41,7 +41,17 @@ We extend this method to configurations of more than 4 spacecraft by using combi
 ```math
 \begin{pmatrix} N \\ 4 \end{pmatrix} = \frac{N!}{4! (N-4)!}
 ```
-tetrahedral subsets (i.e groups 4 spacecraft).
+tetrahedral subsets (i.e groups 4 spacecraft). We preferentially select the tetrahedron of spacecraft that pass both of the following criteria:
+1. The subset must have a shape parameter less than 1. We define the shape parameter, $\chi$, in terms of the tetrahedron's elongation, $E$, and planarity, $P$:
+```math
+\chi = \sqrt{E^2 + P^2} < 1
+```
+2. The barycenter of the tetrahedron of spacecraft, $r_0$, must fall relatively close to the point in space, $\xi$, that we wish to reconstruct the magnetic field. Nearby is defined as being within one characteristic size, $L$, of the barycenter:
+```math
+|r_0 - \xi| < L
+```
+
+We ignore estimates from tetrahedra that do not pass these criteria. At each reconstructed point, we now estimate the value of $B$ using all tetrahedra that pass these criteria. From this esemble of estimates we take the median value as our final computed magnetic field vector $B$.
 
 
 ## How to Use

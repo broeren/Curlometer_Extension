@@ -6,7 +6,9 @@ Traditionally, the Curlometer technique uses magnetic field measurements from fo
 
 We modify this method to instead estimate the value of $B$ itself at points in space not measured by a spacecraft. This problem is formulated as a first order Taylor Series $\forall i \in$ {1,2,3,4}, $m \in$ {*x,y,z*}
 
-$\hat{B}_m^i=B_m+\sum_{k \in \{x,y,z\}} \partial_k B_{m} r_{k}^{i}$
+```math
+\hat{B}_m^i=B_m+\sum_{k \in \{x,y,z\}} \partial_k B_{m} r_{k}^{i}.
+```
 
 
 ## How to Use

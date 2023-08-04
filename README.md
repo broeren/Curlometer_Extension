@@ -69,6 +69,7 @@ To change the shape criteria, change the *chi_thres* parameter. This modifies th
 chi_thres = 1.0         # shape threshold for using a tetrahedron in reconstruction (chi := sqrt{E^2 + P^2})
 ```
 
+![Example Reconstruction](Curlometer_Reconstruction/figures/Brecon_hour94.png)
 
 
 # References

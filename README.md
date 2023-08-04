@@ -69,8 +69,7 @@ To change the shape criteria, change the *chi_thres* parameter. This modifies th
 chi_thres = 1.0         # shape threshold for using a tetrahedron in reconstruction (chi := sqrt{E^2 + P^2})
 ```
 
-![Example Reconstruction](Curlometer_Reconstruction/figures/Brecon_hour94.png)
-
+<img src="Curlometer_Reconstruction/figures/Brecon_hour94.png" alt="Example Reconstruction" width="600"/>
 
 # References
 This work was originally published in the 2021 Frontiers in Astronomy and Space Sciences article *Magnetic Field Reconstruction for a Realistic Multi-Point, Multi-Scale Spacecraft Observatory* by Broeren et al.
